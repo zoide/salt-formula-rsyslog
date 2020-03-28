@@ -15,16 +15,14 @@ include:
   - watch_in:
     - service: rsyslog_service
 
-{%- if global.ssl.get('log-local', False) %}
 /etc/rsyslog.d/50-default.conf:
   file.absent:
   - require:
     - pkg: rsyslog_packages
   - watch_in:
     - service: rsyslog_service
-{%- endif %}
+    
 {%- if global.get('ssl', {'enabled': False}).enabled and global.get('ssl', {}).get('engine', 'salt') == 'manual' %}
-
 {%- set ca_file=global.ssl.get('ca_file', '/etc/rsyslog.d/rsyslog_ca.crt') %}
 {%- set key_file=global.ssl.get('key_file', '/etc/rsyslog.d/rsyslog_client.key') %}
 {%- set cert_file=global.ssl.get('cert_file', '/etc/rsyslog.d/rsyslog_client.crt') %}
