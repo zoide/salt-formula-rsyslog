@@ -26,7 +26,7 @@ Debian:
       /var/log/syslog:
         sync: false
         filter: "*.*;auth,authpriv.none"
-        user: syslog
+        user: root 
         group: adm
         createmode: "0640"
         umask: "0022"
@@ -34,7 +34,7 @@ Debian:
       /var/log/auth.log:
         sync: true
         filter: "auth,authpriv.*"
-        user: syslog
+        user: root 
         group: adm
         createmode: "0640"
         umask: "0022"
@@ -42,7 +42,7 @@ Debian:
       /var/log/kern.log:
         sync: false
         filter: "kern.*"
-        user: syslog
+        user: root 
         group: adm
         createmode: "0640"
         umask: "0022"
@@ -50,7 +50,7 @@ Debian:
       /var/log/mail.log:
         sync: false
         filter: "mail.*"
-        user: syslog
+        user: root 
         group: adm
         createmode: "0640"
         umask: "0022"
@@ -59,7 +59,7 @@ Debian:
         sync: false
         action: /var/log/mail.err
         filter: mail.err
-        user: syslog
+        user: root 
         group: adm
         createmode: "0640"
         umask: "0022"
