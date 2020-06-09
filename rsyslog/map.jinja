@@ -30,7 +30,7 @@ Debian:
         group: adm
         createmode: "0640"
         umask: "0022"
-        enabled: true
+        enabled: false
       /var/log/auth.log:
         sync: true
         filter: "auth,authpriv.*"
@@ -38,7 +38,7 @@ Debian:
         group: adm
         createmode: "0640"
         umask: "0022"
-        enabled: true
+        enabled: false
       /var/log/kern.log:
         sync: false
         filter: "kern.*"
@@ -46,7 +46,7 @@ Debian:
         group: adm
         createmode: "0640"
         umask: "0022"
-        enabled: true
+        enabled: false
       /var/log/mail.log:
         sync: false
         filter: "mail.*"
@@ -54,7 +54,7 @@ Debian:
         group: adm
         createmode: "0640"
         umask: "0022"
-        enabled: true
+        enabled: false
       /var/log/mail.err:
         sync: false
         action: /var/log/mail.err
@@ -63,7 +63,7 @@ Debian:
         group: adm
         createmode: "0640"
         umask: "0022"
-        enabled: true
+        enabled: false
     console:
       wall:
         action: ":omusrmsg:*"
